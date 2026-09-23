@@ -28,6 +28,10 @@ archives:
     name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}"
   - id: regular
     name_template: "{{ .ProjectName }}-{{ .Os }}-{{ .Arch }}"
+    format_overrides:
+      - goos: darwin
+        formats:
+          - zip
 
 release:
   prerelease: auto
